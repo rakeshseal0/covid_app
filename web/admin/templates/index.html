@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link href={% static 'css/style.css' %} rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CV-19 Data</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#">Civil Complaint</a> -->
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#">Texas Profile</a> -->
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <!-- Navbar text with an inline element -->
+                    <a class="nav-link" href="/login">LogOut</a>
+                </span>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body" id="Row1">
+                        <h5 class="card-title">Total Cases</h5>
+                        <p class="card-text" style="font-size:6em;text-align:center;margin-top:-20px">{{total}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body" id="Row1">
+                        <h5 class="card-title">Active Cases</h5>
+                        <p class="card-text" style="font-size:6em;text-align:center;margin-top:-20px">{{active}}<i
+                                class="fa fa-arrow-down" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body" id="Row1">
+                        <h5 class="card-title">Critical cases</h5>
+                        <p class="card-text" style="font-size:6em;text-align:center;margin-top:-20px">{{critical}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="chart-body">
+                        <h5 class="card-title" style="align-self: center;">Covid-19 Cases in March</h5>
+                    <div class="wrapper">
+                        <canvas id='c'></canvas>
+                        <div class="label">text</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <table class="table" id="Row2">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Latest Reports</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>rak3sh</td>
+                            <td>Newtown</td>
+                            <td>9733</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sayan</td>
+                            <td>Garia</td>
+                            <td>8767</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Spandan</td>
+                            <td>Airport</td>
+                            <td>9865</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-12">
+                <div class="carousel" data-flickity='{ "groupCells": true }'>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report1</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report2</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report3</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report4</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report5</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report6</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report7</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report8</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report9</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report10</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report11</div></div>
+                    <div class="carousel-cell"><div style="margin-left: 10%;">Report12</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
+<script src={% static 'js/scripts.js' %}></script>
+
+</html>

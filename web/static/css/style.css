@@ -1,0 +1,91 @@
+#Row1 {
+    /* background: rgb(27,89,70);
+    background: linear-gradient(0deg, rgba(27,89,70,1) 0%, rgba(99,151,153,1) 100%); */
+    /* background: #152B39;
+     */
+     background: rgb(20,28,19);
+background: linear-gradient(0deg, rgba(20,28,19,1) 0%, rgba(38,40,54,1) 100%);
+    color:#fff;
+    height:220px;
+    margin-top:15px;
+  }
+  
+  #Row2 {
+    height:350px;
+    margin-top:15px;
+  }
+  .card{
+    border: 1px solid rgba(0, 0, 0, 0)!important;
+  }
+  .carousel {
+    background: #EEE;
+  }
+  
+  .carousel-cell {
+    width: 15%;
+    height: 300px;
+    min-width:180px;
+    margin-right: 2px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  .carousel-cell.is-selected {
+    background: #21e6a3;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+  /* .card-body{
+    background: rgb(27,89,70);
+    background: linear-gradient(0deg, rgba(27,89,70,1) 0%, rgba(99,151,153,1) 100%);
+  } */
+
+
+.wrapper {
+    display: block;
+    margin: 5em auto;
+    border: 1px solid #555;
+    width: 500px;
+    height: 300px;
+    position: relative;
+  }
+  p{text-align:center;}
+  .label {
+    height: 1em;
+    padding: .3em;
+    background: rgba(255, 255, 255, .8);
+    position: absolute;
+    display: none;
+    color:#333;
+    
+  }
+
+  .chart-body{
+    margin: 15px 0px 15px 0;
+    overflow: auto;
+    background: #152B39;
+    /* font-family: Courier, monospace; */
+    font-size: 14px;
+    color:#ccc; 
+    border-radius: 2px;
+  }
+
+  .label{
+      padding: 0px;
+      padding-bottom: 20px;
+  }
+
+
+  body{
+      /* visibility: hidden; */
+  }
